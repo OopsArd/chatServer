@@ -67,7 +67,7 @@ public class Main {
                 String messageFromClient;
                 while (true)
                 {
-                    byte[] buffer = new byte[1024];
+                    byte[] buffer = new byte[10240];
                     int bytesRead = inputStream.read(buffer);
                     String title = new String(buffer, 0, 4);
 
