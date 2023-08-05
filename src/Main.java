@@ -76,14 +76,11 @@ public class Main {
 
                     if(title.equals("NAME")){
                         String[] mess = messageFromClient.split("`");
-                        System.out.println("____MESS: " + mess);
                         listUsers+= mess[1] + "`";
                         broadcastMessage(listUsers);
 
                         user = mess[1];
                     } else if(title.equals("FILE")){
-                        System.out.println("vào được điều kiện......");
-
                         String[] mess = messageFromClient.split("`");
 
                         String fileName = mess[2];
@@ -128,7 +125,7 @@ public class Main {
             try{
                 outputStream.write(message.getBytes());
             }catch(Exception ex){
-                System.out.println("------Error: " + ex.getMessage());
+                //System.out.println("------Error: " + ex.getMessage());
             }
         }
     }
